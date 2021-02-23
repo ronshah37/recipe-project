@@ -29,5 +29,16 @@ header {
 }
 
 .menu {
-    
+
+}
+
+.bullet1 {
+    color: white;
+    font-weight: bold;
+}
+
+.bullet2 {
+    color: black;
+    background-color: gold;
+    font-weight: bold;
 }
