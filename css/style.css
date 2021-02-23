@@ -22,3 +22,12 @@ table, th, td {
     font-style: normal;
     font-weight: bold;
 }
+
+header {
+    background-image: url(/img/ready-to-eat-480w.jpg) ;
+    color: white;
+}
+
+.menu {
+    
+}
