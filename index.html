@@ -10,19 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
   </head>
   <body>
-    <article>
-      <header>
-        <h1>Delicious No-Knead Baguettes</h1>
-        <p>Make three <b> fluffy and delicious baguettes </b>, using a <i> simple </i> <span class="specialem"> folding technique</span>, instead of labor-intensive kneading.</p>
-        <ul>
-          <li> <span class="bullet1"> Active Time </span> <span class="bullet2"> <time> 40 MINS </time> </span></li>
-          <li> <span class="bullet1">Total Time </span> <span class="bullet2">  <time> 3 HRS </time> </span></li>
-          <li> <span class="bullet1"> Calories </span> <span class="bullet2"> <data> 1670 </data> </span></li>
-          <li> <span class="bullet1"> Skill Level </span> <span class="bullet2"> MEDIUM </span></li>
-        </ul>
+
+    <article class="article">
+
+      <header class="header">
+        <div class="header-cover">
+          <span class="baking">Baking</span>
+          <h1>Delicious No-Knead Baguettes</h1>
+          <p>Make three <b> fluffy and delicious baguettes </b>, using a <i> simple </i> <span class="specialem"> folding technique</span>, instead of labor-intensive kneading.</p>
+          <ul>
+            <li> <span class="bullet1"> ACTIVE TIME </span> <span class="bullet2"> <time> 40 <abbr title="Minutes"> MINS </abbr> </time> </span></li>
+            <li> <span class="bullet1">TOTAL TIME </span> <span class="bullet2">  <time> 3 <abbr title="Hours"> HRS </abbr> </time> </span></li>
+            <li> <span class="bullet1"> CALORIES </span> <span class="bullet2"> <data> 1670 </data> </span></li>
+            <li> <span class="bullet1"> SKILL LEVEL </span> <span class="bullet2"> MEDIUM </span></li>
+          </ul>
+        </div>
       </header>
 
-      <nav class="menu">
+      
+      <div class="menu">
         <ul>
           <li><a href="#story">Story</a></li>
           <li><a href="#ingredients">Ingredients</a></li>
@@ -31,57 +37,41 @@
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#result">Result</a></li>
         </ul>
-      </nav>
-     
-      <main>
-        <section id="story">
-          <h2>Story</h2>
-          Lorem, ipsum dolor <span class="specialem"> delicious bread </span>  consectetur adipisicing elit. Atque eaque porro quaerat? 
-          Fuga cupiditate provident, vitae placeat, iusto dignissimos fugit hic dolor, sint atque 
-          consequuntur maxime? Beatae aliquam dicta sapiente.
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, doloribus asperiores 
-          quaerat ad fuga laboriosam nisi, dicta maxime non commodi velit itaque quo. 
-          Sit debitis sapiente aliquam. Cum, at nostrum?
-
-          <div>
-            <dfn>Poetry is an act of peace. Peace goes into the making of a poem as flour goes into the making of a bread.
-              Pablo Neruda
-            </dfn>
-          </div>
-          
-
-          <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime aliquid laborum praesentium. Placeat, nobis sit. 
-            Ex, modi voluptatum illo repudiandae eos ratione iste quia, reprehenderit odio libero quidem autem aliquid. </p>
-
-            <!-- Carousel -->
-            <div>
-              <div>
-                <img src="img/baked-baguettes-480w.jpg" alt="Baked Baguettes">
-              </div>
-              <div>
-                <img src="img/ingredients-480w.jpg" alt="Ingredients">
-              </div>
-              <div>
-                <img src="img/ready-to-eat-480w.jpg" alt="Ready to eat">
-              </div>
-            </div>
-        </section>
-
-        <section id="ingredients">
+      </div>
+    
+      <div class="sidebar">
+        
+        <section id="sidebar-ingredients">
           <h2>Ingredients</h2>
           <!-- Toggle switch -->
-          <ul>
-            <li>500 g bread flour</li>
-            <li>400 g cool water</li>
-            <li>10 g salt</li>
-            <li>7.5 g yeast</li>
-            <li>Extra flour (for dusting)</li>
-          </ul>
+          
+            <input type="radio" id="sidebar-grams" name="sidebar-contentunits" value="sidebar-grams" checked>
+            <label for="sidebar-grams">grams</label>
+            <input type="radio" id="sidebar-lbzoz" name="sidebar-contentunits" value="sidebar-lbzoz">
+            <label for="sidebar-lbzoz">lbz, oz</label>
+            <div class="sidebar-grams">
+              <ul>
+                <li> 500 g bread flour</li>
+                <li> 400 g cool water</li>
+                <li> 10 g salt</li>
+                <li> 7.5 g yeast</li>
+                <li>Extra flour (for dusting)</li>
+              </ul>
+            </div>
+            <div class="sidebar-lbzoz">
+              <ul>
+                <li> 1.1 pounds bread flour</li>
+                <li> 0.8 pounds cool water</li>
+                <li> 0.02 pounds salt</li>
+                <li> 0.01 pounds yeast</li>
+                <li>Extra flour (for dusting)</li>
+              </ul>
+            </div>
+          
+          
         </section>
 
-
-        <section id="equipment">
+        <section id="sidebar-equipment">
           <h2>Equipment</h2>
           <ul>
             <li>Large Bowl</li>
@@ -91,8 +81,98 @@
             <li>Thermometer</li>
           </ul>
         </section>
+      </div>
+     
+      <main class="main">
+          <section id="story">
+            <h2>Story</h2>
+            Lorem, ipsum dolor <span class="specialem"> delicious bread </span>  consectetur adipisicing elit. Atque eaque porro quaerat? 
+            Fuga cupiditate provident, vitae placeat, iusto dignissimos fugit hic dolor, sint atque 
+            consequuntur maxime? Beatae aliquam dicta sapiente.
 
-        <section id="process">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, doloribus asperiores 
+            quaerat ad fuga laboriosam nisi, dicta maxime non commodi velit itaque quo. 
+            Sit debitis sapiente aliquam. Cum, at nostrum?
+
+            <blockquote>
+              <p>Poetry is an act of peace. Peace goes into the making of a poem as flour goes into the making of a bread.</p>
+              <div>
+                Pablo Neruda
+              </div>
+            </blockquote>
+            
+
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime aliquid laborum praesentium. Placeat, nobis sit. 
+              Ex, modi voluptatum illo repudiandae eos ratione iste quia, reprehenderit odio libero quidem autem aliquid. </p>
+
+              <!-- Slider CSS -->
+              <div class="slidershow">
+
+                <div class="slides">
+                  <input type="radio" name="r" id="r1" checked>
+                  <input type="radio" name="r" id="r2">
+                  <input type="radio" name="r" id="r3">
+                  <div class="slide s1">
+                    <img src="img/gallery-a.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/gallery-b.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="img/gallery-c.jpg" alt="">
+                  </div>
+                </div>
+          
+                <div class="navigation">
+                  <label for="r1" class="bar"></label>
+                  <label for="r2" class="bar"></label>
+                  <label for="r3" class="bar"></label>
+                </div>
+              </div>
+              
+          </section>
+
+          <div class="prerequisite">
+            <section id="ingredients">
+              <h2>Ingredients</h2>
+              <!-- Toggle switch -->
+              <input type="radio" checked="checked" id="grams" name="contentunits" value="grams" >
+              <label for="grams">grams</label>
+              <input type="radio" id="lbzoz" name="contentunits" value="lbzoz">
+              <label for="lbzoz">lbz, oz</label>
+              <div class="grams">
+                <ul>
+                  <li> 500 g bread flour</li>
+                  <li> 400 g cool water</li>
+                  <li> 10 g salt</li>
+                  <li> 7.5 g yeast</li>
+                  <li>Extra flour (for dusting)</li>
+                </ul>
+              </div>
+              <div class="lbzoz">
+                <ul>
+                  <li> 1.1 pounds bread flour</li>
+                  <li> 0.8 pounds cool water</li>
+                  <li> 0.02 pounds salt</li>
+                  <li> 0.01 pounds yeast</li>
+                  <li>Extra flour (for dusting)</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="equipment">
+              <h2>Equipment</h2>
+              <ul>
+                <li>Large Bowl</li>
+                <li>Plastic wrap</li>
+                <li>Baking sheet or stone</li>
+                <li>Bench Scraper</li>
+                <li>Thermometer</li>
+              </ul>
+            </section>
+          </div>
+
+          <section id="process">
           <h2>Process</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quaerat iure ab
               voluptatibus culpa consectetur facilis, veniam quidem ducimus, enim excepturi quos
@@ -156,6 +236,7 @@
               
             </li>
           </ol>
+          </section>
 
           <section id="schedule">
             <h2>Schedule</h2>
@@ -239,9 +320,20 @@
           </section>
       </main>
 
-      <footer>
-        <p><span class="copyright">Copyright &copy; 1970</span>  </p>
-        <p> <span class="specialem">Terms | Privacy</span> </p>
+      <footer class="footer">
+        
+        <div class="footercontent">
+            <div class="copyright"><span >Copyright &copy; 1970</span>  </div>
+            <div class="terms"> <span class="specialem">Terms | Privacy</span> </div>
+        </div>
+        <div class="footerimages">
+          <ul>
+            <li> <img src="img/facebook.png" alt="Facebook"></li>
+            <li> <img src="img/twitter.png" alt="Twitter"> </li>
+            <li> <img src="img/instagram.png" alt="Instagram"> </li>
+          </ul>
+        </div>
+      
       </footer>
     </article>
   </body>

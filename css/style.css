@@ -1,44 +1,323 @@
-footer {
-    background-color: black;
-    /* opacity: 50%; */
+html, body {
+    margin:0;
+    padding: 0;
+    
 }
 
-.copyright {
+.article {
+    /* padding-left: 1em; */
+    /* box-sizing: content-box; */
+    display: grid;
+    /* width: 30 em; */
+}
+
+.header {
+    background-image: url(../img/ready-to-eat-480w.jpg) ;
     color: white;
+    margin-left: -1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    grid-area: header;
+}
+
+.header-cover  {
+    padding-left: 1em;
+}
+
+.sidebar {
+    background-color: #FFBC48;
+    grid-area: sidebar;
+    padding-left: 1em;
+    margin: 0;
+}
+
+input[value=sidebar-grams]:checked ~ .sidebar-lbzoz {
+display: none;
+}
+
+input[value=sidebar-lbzoz]:checked ~ .sidebar-grams {
+    display: none;
+}
+
+input[value=grams]:checked ~ .lbzoz {
+    display: none;
+}
+
+input[value=lbzoz]:checked ~ .grams {
+    display: none;
+}
+
+.header .baking {
+    background-color: #FFBC48;
+    color: #222028;
+    font-weight: bolder;
+}
+
+.header ul{
+    list-style-type: none;
+}
+
+.header ul li {
+    margin-left: -2.5em;
+}
+
+.header .bullet1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Georgia Regular', 'Fira Sans SemiBold', Times, serif;
+    
+}
+
+.header .bullet2 {
+    color: black;
+    background-color: #FFBC48;
+    font-weight: bold;
+    font-family: 'Georgia Regular', 'Fira Sans SemiBold', Times, serif;
+}
+
+.menu {
+    width: 100%;
+    background-color: #222028;
+    grid-area: menu;
+}
+
+.menu ul {
+    list-style-type: none;  
+    width: 100%;
+}
+  
+.menu a  {
+    color: #FFBC48;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.menu a:hover {
+    background-color: #ccc;
+}
+
+.main {
+    grid-area: main;
+    padding-left: 1em;
 }
 
 .specialem {
-    color: gold;
+    color: #FFBC48;
     text-decoration: underline;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-spacing: 0;
+blockquote {
+	--b-width: 0.3em;
+	
+	font-size: 1em;
+	border-left: var(--b-width) solid #FFBC48;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0 calc(1em - var(--b-width));
+}
+
+/* Slider CSS */
+
+.slidershow{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.navigation{
+    position: relative;
+    bottom: 3em;
+    margin-left: 60%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 3em;
+    height: 1em;
+    border: 0.2em solid #FFBC48;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: white;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
 }
 
 .highlight {
-    background-color: gold;
+    background-color: #FFBC48;
     font-style: normal;
     font-weight: bold;
 }
 
-header {
-    background-image: url(../img/ready-to-eat-480w.jpg) ;
+figure {
+    margin-left: 0;
+}
+
+table, th, td {
+    border: 1px solid #222028;
+    border-spacing: 0;
+}
+
+.footer {
+    background-color: #222028;
+    margin: 0;
+    padding-left: 1em;
+    display: flex;
+    grid-area: footer;
+}
+
+
+.footer .terms {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.copyright {
     color: white;
+    padding-top: 1em;
+    white-space: nowrap;
 }
 
-.menu {
-
+.footer img {
+    width: 2em;
+    height: 2em;
 }
 
-.bullet1 {
-    color: white;
-    font-weight: bold;
+.footercontent {
+    float: left;
 }
 
-.bullet2 {
-    color: black;
-    background-color: gold;
-    font-weight: bold;
+.footerimages {
+    /* float: right; */
+    /* margin-left: 70%; */
+    /* margin-top: 1.5em; */
 }
+
+.footerimages ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.footerimages ul li {
+    margin: 0;
+    padding: 0.5em;
+}
+
+/*Responsive using grids*/
+@media screen and (min-width: 600px) {
+	.article {
+		grid-template-columns: 1fr 1fr 2fr;
+		grid-template-areas: 
+			"header  header header" 
+			"sidebar menu   menu"
+			"sidebar main   main"
+            "sidebar footer footer";
+            /* justify-self: center; */
+	}
+
+    .header-cover ul {
+        display: flex;
+        
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .prerequisite {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu ul {
+        display: flex;
+        
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .menu ul li {
+        margin: 0;
+    }
+
+    .footerimages {
+        margin-left: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+	.article {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"header" 
+			"menu"
+			"main"
+            "footer";
+            /* justify-self: center; */
+	}
+
+    .sidebar {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        margin-left: -2.5em;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .menu ul li {
+        margin: 0;
+        padding: 1em;
+    }
+
+    .footerimages {
+        margin-left: 30%;
+    }
+}
+
